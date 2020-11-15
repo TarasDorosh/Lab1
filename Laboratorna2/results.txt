@@ -3,18 +3,84 @@
 No URL passed to function
 ========================================
 Результат з правильною URL: 
-Time is:  03:46:10 PM
+Time is:  04:05:29 PM
 Date is:  11-15-2020
 ========================================
 Результат з правильною URL: 
 ДоБрОї НоЧі
 ========================================
 Результат без параметрів: 
+ДоБрОї НоЧі
 ============================= test session starts ==============================
 platform linux -- Python 3.8.5, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
 rootdir: /home/oleh/Lab1/Laboratorna2
 collected 4 items
 
-tests/tests.py ....                                                      [100%]
+tests/tests.py ..F.                                                      [100%]
 
-============================== 4 passed in 0.81s ===============================
+=================================== FAILURES ===================================
+___________________________ TestClass.test_home_work ___________________________
+
+self = <tests.tests.TestClass testMethod=test_home_work>
+
+    def test_home_work(self):
+        # Ваш захист
+>       self.assertEqual(home_work('12'),"ДоБрОї НоЧі")
+
+tests/tests.py:25: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+app.py:50: in home_work
+    r = requests.get(url=url)
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/api.py:76: in get
+    return request('get', url, params=params, **kwargs)
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/api.py:61: in request
+    return session.request(method=method, url=url, **kwargs)
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/sessions.py:516: in request
+    prep = self.prepare_request(req)
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/sessions.py:449: in prepare_request
+    p.prepare(
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/models.py:314: in prepare
+    self.prepare_url(url, params)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+self = <PreparedRequest [GET]>, url = '12', params = OrderedDict()
+
+    def prepare_url(self, url, params):
+        """Prepares the given HTTP URL."""
+        #: Accept objects that have string representations.
+        #: We're unable to blindly call unicode/str functions
+        #: as this will include the bytestring indicator (b'')
+        #: on python 3.x.
+        #: https://github.com/psf/requests/pull/2238
+        if isinstance(url, bytes):
+            url = url.decode('utf8')
+        else:
+            url = unicode(url) if is_py2 else str(url)
+    
+        # Remove leading whitespaces from url
+        url = url.lstrip()
+    
+        # Don't do any URL preparation for non-HTTP schemes like `mailto`,
+        # `data` etc to work around exceptions from `url_parse`, which
+        # handles RFC 3986 only.
+        if ':' in url and not url.lower().startswith('http'):
+            self.url = url
+            return
+    
+        # Support for unicode domain names and paths.
+        try:
+            scheme, auth, host, port, path, query, fragment = parse_url(url)
+        except LocationParseError as e:
+            raise InvalidURL(*e.args)
+    
+        if not scheme:
+            error = ("Invalid URL {0!r}: No schema supplied. Perhaps you meant http://{0}?")
+            error = error.format(to_native_string(url, 'utf8'))
+    
+>           raise MissingSchema(error)
+E           requests.exceptions.MissingSchema: Invalid URL '12': No schema supplied. Perhaps you meant http://12?
+
+../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/models.py:388: MissingSchema
+=========================== short test summary info ============================
+FAILED tests/tests.py::TestClass::test_home_work - requests.exceptions.Missin...
+========================= 1 failed, 3 passed in 1.27s ==========================
