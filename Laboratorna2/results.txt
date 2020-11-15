@@ -3,7 +3,7 @@
 No URL passed to function
 ========================================
 Результат з правильною URL: 
-Time is:  04:05:29 PM
+Time is:  04:09:27 PM
 Date is:  11-15-2020
 ========================================
 Результат з правильною URL: 
@@ -83,4 +83,4 @@ E           requests.exceptions.MissingSchema: Invalid URL '12': No schema suppl
 ../../.local/share/virtualenvs/oleh-dJTG35rZ/lib/python3.8/site-packages/requests/models.py:388: MissingSchema
 =========================== short test summary info ============================
 FAILED tests/tests.py::TestClass::test_home_work - requests.exceptions.Missin...
-========================= 1 failed, 3 passed in 1.27s ==========================
+========================= 1 failed, 3 passed in 1.18s ==========================
