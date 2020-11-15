@@ -40,7 +40,7 @@ def main(url=''):
 
 
 def home_work(url=''):
-    if url:
+    if url=='' or url:
         my_time = time.strftime('%H', time.localtime())
         if int(my_time) >= 12:
             h = "ДоБрОї НоЧі"
