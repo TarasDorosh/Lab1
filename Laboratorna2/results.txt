@@ -13,7 +13,7 @@ Date is:  11-15-2020
 ДоБрОї НоЧі
 ============================= test session starts ==============================
 platform linux -- Python 3.8.5, pytest-6.1.2, py-1.9.0, pluggy-0.13.1
-rootdir: /home/oleh/Lab1/Laboratorna2
+rootdir: /home/Taras/Lab1/Laboratorna2
 collected 4 items
 
 tests/tests.py ....                                                      [100%]
