@@ -1,0 +1,23 @@
+INFO 2020-11-29 13:03:33,801 root : Сервер доступний. Час на сервері: 29 Nov 2020 11:03:33
+INFO 2020-11-29 13:03:33,802 root : Запитувана сторінка: : http://localhost:8000/health/
+INFO 2020-11-29 13:03:33,802 root : Відповідь сервера місти наступні поля:
+INFO 2020-11-29 13:03:33,802 root : Ключ: date, Значення: 29 Nov 2020 11:03:33
+INFO 2020-11-29 13:03:33,803 root : Ключ: current_page, Значення: http://localhost:8000/health/
+INFO 2020-11-29 13:03:33,803 root : Ключ: server_info, Значення: Linux
+INFO 2020-11-29 13:03:33,803 root : Ключ: client_info, Значення: Dorosh_T
+INFO 2020-11-29 13:04:33,865 root : Сервер доступний. Час на сервері: 29 Nov 2020 11:04:33
+INFO 2020-11-29 13:04:33,865 root : Запитувана сторінка: : http://localhost:8000/health/
+INFO 2020-11-29 13:04:33,865 root : Відповідь сервера місти наступні поля:
+INFO 2020-11-29 13:04:33,865 root : Ключ: date, Значення: 29 Nov 2020 11:04:33
+INFO 2020-11-29 13:04:33,866 root : Ключ: current_page, Значення: http://localhost:8000/health/
+INFO 2020-11-29 13:04:33,866 root : Ключ: server_info, Значення: Linux
+INFO 2020-11-29 13:04:33,866 root : Ключ: client_info, Значення: Dorosh_T
+INFO 2020-11-29 13:05:33,939 root : Сервер доступний. Час на сервері: 29 Nov 2020 11:05:33
+INFO 2020-11-29 13:05:33,940 root : Запитувана сторінка: : http://localhost:8000/health/
+INFO 2020-11-29 13:05:33,940 root : Відповідь сервера місти наступні поля:
+INFO 2020-11-29 13:05:33,940 root : Ключ: date, Значення: 29 Nov 2020 11:05:33
+INFO 2020-11-29 13:05:33,940 root : Ключ: current_page, Значення: http://localhost:8000/health/
+INFO 2020-11-29 13:05:33,940 root : Ключ: server_info, Значення: Linux
+INFO 2020-11-29 13:05:33,941 root : Ключ: client_info, Значення: Dorosh_T
+ERROR 2020-11-29 13:06:33,953 root : lab3: couldn't open page:HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f67a6300280>: Failed to establish a new connection: [Errno 111] Connection refused'))
+ERROR 2020-11-29 13:07:34,023 root : lab3: couldn't open page:HTTPConnectionPool(host='localhost', port=8000): Max retries exceeded with url: /health (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f67a6300b50>: Failed to establish a new connection: [Errno 111] Connection refused'))
