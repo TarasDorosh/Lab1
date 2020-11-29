@@ -1,0 +1,26 @@
+#laboratorna3
+---
+- створив віртуальне середовище
+    - pipenv --python 3.8
+---
+- встановив бібліотеку:
+    - pipenv install django
+---
+- створив шаблон сайту my_site
+---
+- сайт працює коректно
+---
+- створив шаблон додатку main
+---
+- модифікував файли:
+    - main/urls.py
+    - my_site/settings.py
+    - my_site/url.py
+    - main/views.py
+---
+- створив та заповнив файл monitoring.py 
+---
+- встановив бібліотеку:
+    - pipenv install requests
+---
+- виконав домашнє завдання
