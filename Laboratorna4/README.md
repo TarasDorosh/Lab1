@@ -9,7 +9,7 @@
    - *Перенаправив вивід в my_work.log:*
        - docker -v > my_work.log && docker -h >> my_work.log && sudo docker run docker/whalesay cowsay Docker is fun >> my_work.log
 ---
-### 3. Ознайомилася з документацією
+### 3. Ознайомився з документацією
 ---
 ### 4. - Виконав команди:
    - sudo docker pull python:3.8-slim
