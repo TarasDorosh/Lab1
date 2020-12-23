@@ -6,7 +6,7 @@
    - sudo docker -v
    - sudo docker -h
    - sudo docker run docker/whalesay cowsay Docker is fun
-   - **Перенаправив вивід в my_work.log:**
+   - *Перенаправив вивід в my_work.log:*
        - docker -v > my_work.log && docker -h >> my_work.log && sudo docker run docker/whalesay cowsay Docker is fun >> my_work.log
 ---
 ### 3. Ознайомилася з документацією
